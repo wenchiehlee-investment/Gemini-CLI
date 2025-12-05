@@ -1,4 +1,5 @@
 import requests
+import os
 from bs4 import BeautifulSoup
 from google import genai
 
@@ -37,7 +38,12 @@ except Exception as e:
 # 2. Summarize with Gemini
 print("Summarizing with Gemini 2.5 Pro...")
 
-client = genai.Client(api_key="AIzaSyA-GZvh_EYBPb6A5970Ka4ypEfJsdkGzDc")
+api_key = os.environ.get("GOOGLE_API_KEY")
+if not api_key:
+    print("Error: GOOGLE_API_KEY environment variable not set")
+    exit(1)
+
+client = genai.Client(api_key=api_key)
 
 try:
     # Using gemini-2.5-pro for its large context window and reasoning capabilities

@@ -30,7 +30,7 @@ This project is a Python-based workspace for interacting with Google's Gemini AP
 - **Run Basic Test**: `python genai.py`
 
 ## Development Notes & Observations
-- **API Key Security**: The scripts currently contain a hardcoded API key. **Priority improvement**: Move this to an environment variable (e.g., `GOOGLE_API_KEY`).
+- **Security Update**: The hardcoded API key has been removed. Scripts now require the `GOOGLE_API_KEY` environment variable.
 - **Model Selection**:
     - `list_models.py` confirms access to newer models like `gemini-2.5-flash`, `gemini-2.5-pro`, and experimental versions.
     - `summarize_url.py` specifically uses `gemini-2.5-pro` to handle large context windows required for full-page articles.
