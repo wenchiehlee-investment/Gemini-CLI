@@ -5,7 +5,22 @@ This project serves as a workspace for interacting with Google's Gemini API usin
 ## Prerequisites
 
 1.  **Python 3.x** installed.
-2.  **Google GenAI API Key** (The scripts currently use a hardcoded key, but it is recommended to use environment variables for security).
+2.  **Google GenAI API Key**: Set as an environment variable named `GOOGLE_API_KEY`.
+
+    **Windows (PowerShell):**
+    ```powershell
+    $env:GOOGLE_API_KEY="your_api_key_here"
+    ```
+
+    **Windows (CMD):**
+    ```cmd
+    set GOOGLE_API_KEY=your_api_key_here
+    ```
+
+    **Linux/macOS:**
+    ```bash
+    export GOOGLE_API_KEY="your_api_key_here"
+    ```
 
 ## Installation
 
