@@ -2,6 +2,7 @@ import os
 import argparse
 import datetime # Import datetime
 from google import genai
+from dotenv import load_dotenv # Import load_dotenv
 
 def update_readme(content, start_marker, end_marker):
     """Updates the README.md file between specific markers."""
@@ -35,6 +36,9 @@ def update_readme(content, start_marker, end_marker):
         
     except Exception as e:
         print(f"Error updating README: {e}")
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Retrieve API key from environment variable
 api_key = os.environ.get("GOOGLE_API_KEY")

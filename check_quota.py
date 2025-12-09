@@ -1,6 +1,10 @@
 import os
 import sys
 import datetime # Import datetime
+from dotenv import load_dotenv # Import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Try to import required libraries
 try:

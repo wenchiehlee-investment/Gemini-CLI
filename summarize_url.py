@@ -9,6 +9,7 @@ import argparse
 import datetime # Import datetime
 from bs4 import BeautifulSoup
 from google import genai
+from dotenv import load_dotenv # Import load_dotenv
 
 def update_readme(content, start_marker, end_marker):
     """Updates the README.md file between specific markers."""
@@ -42,6 +43,9 @@ def update_readme(content, start_marker, end_marker):
         
     except Exception as e:
         print(f"Error updating README: {e}")
+
+# Load environment variables from .env file
+load_dotenv()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Summarize URL content")
