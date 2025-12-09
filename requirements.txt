@@ -4,3 +4,4 @@ beautifulsoup4
 google-cloud-service-usage
 google-auth
 google-api-python-client
+python-dotenv

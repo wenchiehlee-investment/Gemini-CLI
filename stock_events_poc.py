@@ -3,6 +3,10 @@ import argparse
 import datetime # Import datetime
 from bs4 import BeautifulSoup
 from google import genai
+from dotenv import load_dotenv # Import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Mock Data: In a real production app, this would be fetched via `requests` from a news API or website.
 # We are simulating a "raw feed" of unstructured market text.
