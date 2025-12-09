@@ -1,0 +1,37 @@
+name: Weekly Stock Events Extraction
+
+on:
+  schedule:
+    # Run at 01:00 on Monday (UTC)
+    - cron: '0 1 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  extract-events:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Stock Events Extraction
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: python stock_events_poc.py
+
+      - name: Upload CSV Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: market-events-csv
+          path: market_events.csv
+          retention-days: 7
