@@ -1,0 +1,37 @@
+name: Manual Script Runner
+
+on:
+  workflow_dispatch:
+    inputs:
+      script_name:
+        description: 'Script to run'
+        required: true
+        default: 'list_models.py'
+        type: choice
+        options:
+          - list_models.py
+          - genai.py
+          - summarize_url.py
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Script
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: python ${{ inputs.script_name }}
