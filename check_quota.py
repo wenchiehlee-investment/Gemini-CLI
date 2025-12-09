@@ -27,12 +27,48 @@ def get_project_id():
 
     return None
 
-def check_quota(project_id):
+import argparse
+
+def update_readme(content, start_marker, end_marker):
+    """Updates the README.md file between specific markers."""
+    readme_path = "README.md"
+    try:
+        with open(readme_path, "r", encoding="utf-8") as f:
+            readme_content = f.read()
+        
+        start_pos = readme_content.find(start_marker)
+        end_pos = readme_content.find(end_marker)
+        
+        if start_pos == -1 or end_pos == -1:
+            print(f"Warning: Markers {start_marker} and {end_marker} not found in {readme_path}")
+            return
+
+        new_content = (
+            readme_content[:start_pos + len(start_marker)]
+            + "\n```text\n" + content + "\n```\n"
+            + readme_content[end_pos:]
+        )
+        
+        with open(readme_path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+            
+        print(f"Successfully updated {readme_path}")
+        
+    except Exception as e:
+        print(f"Error updating README: {e}")
+
+def check_quota(project_id, update_readme_flag=False):
     """
     Fetches and displays the quota for the Generative Language API using the Service Usage API v1beta1.
     """
     print(f"Checking quotas for Project ID: {project_id}...")
     
+    output_buffer = []
+    
+    def log(message):
+        print(message)
+        output_buffer.append(message)
+
     try:
         # Build the Service Usage API client
         # We need v1beta1 to access consumerQuotaMetrics nicely or we can use serviceusage v1
@@ -47,10 +83,10 @@ def check_quota(project_id):
         response = request.execute()
         
         if response.get('state') != 'ENABLED':
-            print(f"Service '{service_name}' is NOT ENABLED for this project.")
+            log(f"Service '{service_name}' is NOT ENABLED for this project.")
             return
             
-        print(f"Service '{service_name}' is ENABLED. Fetching consumer quota metrics...")
+        log(f"Service '{service_name}' is ENABLED. Fetching consumer quota metrics...")
 
         request = service.services().consumerQuotaMetrics().list(parent=parent)
         response = request.execute()
@@ -116,8 +152,8 @@ def check_quota(project_id):
             "Global" # Global limits
         ]
 
-        print(f"\n{'Model Name':<30} | {'RPM':<15} | {'RPD':<15} | {'TPM':<15}")
-        print("-" * 85)
+        log(f"\n{'Model Name':<30} | {'RPM':<15} | {'RPD':<15} | {'TPM':<15}")
+        log("-" * 85)
 
         # Sort: Target models first, then alphabetical for others if they contain "flash" or "pro"
         # But for "Summary Table Only" request, let's stick to the targets + major versions
@@ -138,20 +174,30 @@ def check_quota(project_id):
                 rpd = limits_by_model[model].get("Requests per Day", "-")
                 tpm = limits_by_model[model].get("Tokens per Minute", "-")
                 
-                print(f"{model:<30} | {str(rpm):<15} | {str(rpd):<15} | {str(tpm):<15}")
+                log(f"{model:<30} | {str(rpm):<15} | {str(rpd):<15} | {str(tpm):<15}")
 
-        print("-" * 85)
-        print("RPM = Requests Per Minute, RPD = Requests Per Day, TPM = Tokens Per Minute")
-        print("'-' means no specific limit found (or unlimited if not explicitly set to -1).")
+        log("-" * 85)
+        log("RPM = Requests Per Minute, RPD = Requests Per Day, TPM = Tokens Per Minute")
+        log("'-' means no specific limit found (or unlimited if not explicitly set to -1).")
+
+        if update_readme_flag:
+             full_output = "\n".join(output_buffer)
+             # Remove the initial "Checking quotas..." and "Service ENABLED" logs for cleaner README
+             clean_output = "\n".join(output_buffer[2:]) 
+             update_readme(clean_output, "<!-- START_QUOTA_OUTPUT -->", "<!-- END_QUOTA_OUTPUT -->")
                         
     except Exception as e:
-        print(f"Error fetching quotas: {e}")
-        print("\nTroubleshooting:")
-        print("1. Ensure you have run 'gcloud auth application-default login'.")
-        print("2. Ensure your account has 'Service Usage Consumer' role.")
-        print("3. Ensure the Project ID is correct.")
+        log(f"Error fetching quotas: {e}")
+        log("\nTroubleshooting:")
+        log("1. Ensure you have run 'gcloud auth application-default login'.")
+        log("2. Ensure your account has 'Service Usage Consumer' role.")
+        log("3. Ensure the Project ID is correct.")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Check Gemini API Quotas")
+    parser.add_argument("--update-readme", action="store_true", help="Update the README.md file with the output")
+    args = parser.parse_args()
+
     print("--- Gemini API Quota Checker (Discovery) ---")
     
     # Prerequisite Check
@@ -162,4 +208,4 @@ if __name__ == "__main__":
         print("Please set the 'GCP_PROJECT_ID' environment variable.")
         sys.exit(1)
         
-    check_quota(proj_id)
+    check_quota(proj_id, args.update_readme)
