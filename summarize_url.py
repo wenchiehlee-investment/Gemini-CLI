@@ -36,7 +36,7 @@ except Exception as e:
     exit(1)
 
 # 2. Summarize with Gemini
-print("Summarizing with Gemini 2.5 Pro...")
+print("Summarizing with Gemini 2.5 Flash...")
 
 api_key = os.environ.get("GOOGLE_API_KEY")
 if not api_key:
@@ -46,9 +46,9 @@ if not api_key:
 client = genai.Client(api_key=api_key)
 
 try:
-    # Using gemini-2.5-pro for its large context window and reasoning capabilities
+    # Using gemini-2.5-flash for reliability
     response = client.models.generate_content(
-        model="gemini-2.5-pro",
+        model="gemini-2.5-flash",
         contents=f"請用繁體中文提供以下文章的詳細摘要。請重點關注融資餘額和市場相關性方面的關鍵點：\n\n{clean_text[:50000]}" # Limit to 50k chars just in case, though pro handles more
     )
     

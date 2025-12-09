@@ -9,7 +9,7 @@ if not api_key:
 client = genai.Client(api_key=api_key)
 
 response = client.models.generate_content(
-    model="gemini-2.5-pro", contents="Explain how AI works in a 100+ words in traditional chinese"
+    model="gemini-2.5-flash", contents="Explain how AI works in a 100+ words in traditional chinese"
 )
 print(response.text)
 
