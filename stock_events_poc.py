@@ -1,4 +1,7 @@
 import os
+import argparse
+import datetime # Import datetime
+from bs4 import BeautifulSoup
 from google import genai
 
 # Mock Data: In a real production app, this would be fetched via `requests` from a news API or website.
@@ -30,8 +33,6 @@ MARKET INTELLIGENCE REPORT - DECEMBER 2025
     - Weekly market close.
 """
 
-import argparse
-
 def update_readme(content, start_marker, end_marker):
     """Updates the README.md file between specific markers."""
     readme_path = "README.md"
@@ -46,9 +47,14 @@ def update_readme(content, start_marker, end_marker):
             print(f"Warning: Markers {start_marker} and {end_marker} not found in {readme_path}")
             return
 
+        # Generate timestamp
+        now = datetime.datetime.now()
+        timestamp_str = now.strftime("產生時間: %Y-%m-%d %H:%M:%S") + " CST"
+
+
         new_content = (
             readme_content[:start_pos + len(start_marker)]
-            + "\n```csv\n" + content + "\n```\n"
+            + f"\n{timestamp_str}\n\n```csv\n" + content + "\n```\n" # Add timestamp here, use ```csv
             + readme_content[end_pos:]
         )
         

@@ -1,5 +1,6 @@
 import os
 import argparse
+import datetime # Import datetime
 from google import genai
 
 def update_readme(content, start_marker, end_marker):
@@ -16,9 +17,14 @@ def update_readme(content, start_marker, end_marker):
             print(f"Warning: Markers {start_marker} and {end_marker} not found in {readme_path}")
             return
 
+        # Generate timestamp
+        now = datetime.datetime.now()
+        timestamp_str = now.strftime("產生時間: %Y-%m-%d %H:%M:%S") + " CST"
+
+
         new_content = (
             readme_content[:start_pos + len(start_marker)]
-            + "\n```text\n" + content + "\n```\n"
+            + f"\n{timestamp_str}\n\n```text\n" + content + "\n```\n"
             + readme_content[end_pos:]
         )
         
