@@ -9,6 +9,8 @@ on:
 jobs:
   extract-events:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to commit README changes
 
     steps:
       - name: Checkout code
@@ -27,7 +29,7 @@ jobs:
       - name: Run Stock Events Extraction
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-        run: python stock_events_poc.py
+        run: python stock_events_poc.py --update-readme
 
       - name: Upload CSV Artifact
         uses: actions/upload-artifact@v4
@@ -35,3 +37,11 @@ jobs:
           name: market-events-csv
           path: market_events.csv
           retention-days: 7
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          # Only commit if there are changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: Update stock events in README" && git push)
