@@ -34,8 +34,162 @@ pip install -r requirements.txt
 Lists all Gemini models available to your API key, showing their system names and display names.
 
 <!-- START_MODELS_OUTPUT -->
-```bash
-python list_models.py
+產生時間: 2025-12-11 13:33:49 CST
+
+```text
+Model Name: models/embedding-gecko-001
+Display Name: Embedding Gecko
+--------------------
+Model Name: models/gemini-2.5-flash
+Display Name: Gemini 2.5 Flash
+--------------------
+Model Name: models/gemini-2.5-pro
+Display Name: Gemini 2.5 Pro
+--------------------
+Model Name: models/gemini-2.0-flash-exp
+Display Name: Gemini 2.0 Flash Experimental
+--------------------
+Model Name: models/gemini-2.0-flash
+Display Name: Gemini 2.0 Flash
+--------------------
+Model Name: models/gemini-2.0-flash-001
+Display Name: Gemini 2.0 Flash 001
+--------------------
+Model Name: models/gemini-2.0-flash-exp-image-generation
+Display Name: Gemini 2.0 Flash (Image Generation) Experimental
+--------------------
+Model Name: models/gemini-2.0-flash-lite-001
+Display Name: Gemini 2.0 Flash-Lite 001
+--------------------
+Model Name: models/gemini-2.0-flash-lite
+Display Name: Gemini 2.0 Flash-Lite
+--------------------
+Model Name: models/gemini-2.0-flash-lite-preview-02-05
+Display Name: Gemini 2.0 Flash-Lite Preview 02-05
+--------------------
+Model Name: models/gemini-2.0-flash-lite-preview
+Display Name: Gemini 2.0 Flash-Lite Preview
+--------------------
+Model Name: models/gemini-exp-1206
+Display Name: Gemini Experimental 1206
+--------------------
+Model Name: models/gemini-2.5-flash-preview-tts
+Display Name: Gemini 2.5 Flash Preview TTS
+--------------------
+Model Name: models/gemini-2.5-pro-preview-tts
+Display Name: Gemini 2.5 Pro Preview TTS
+--------------------
+Model Name: models/gemma-3-1b-it
+Display Name: Gemma 3 1B
+--------------------
+Model Name: models/gemma-3-4b-it
+Display Name: Gemma 3 4B
+--------------------
+Model Name: models/gemma-3-12b-it
+Display Name: Gemma 3 12B
+--------------------
+Model Name: models/gemma-3-27b-it
+Display Name: Gemma 3 27B
+--------------------
+Model Name: models/gemma-3n-e4b-it
+Display Name: Gemma 3n E4B
+--------------------
+Model Name: models/gemma-3n-e2b-it
+Display Name: Gemma 3n E2B
+--------------------
+Model Name: models/gemini-flash-latest
+Display Name: Gemini Flash Latest
+--------------------
+Model Name: models/gemini-flash-lite-latest
+Display Name: Gemini Flash-Lite Latest
+--------------------
+Model Name: models/gemini-pro-latest
+Display Name: Gemini Pro Latest
+--------------------
+Model Name: models/gemini-2.5-flash-lite
+Display Name: Gemini 2.5 Flash-Lite
+--------------------
+Model Name: models/gemini-2.5-flash-image-preview
+Display Name: Nano Banana
+--------------------
+Model Name: models/gemini-2.5-flash-image
+Display Name: Nano Banana
+--------------------
+Model Name: models/gemini-2.5-flash-preview-09-2025
+Display Name: Gemini 2.5 Flash Preview Sep 2025
+--------------------
+Model Name: models/gemini-2.5-flash-lite-preview-09-2025
+Display Name: Gemini 2.5 Flash-Lite Preview Sep 2025
+--------------------
+Model Name: models/gemini-3-pro-preview
+Display Name: Gemini 3 Pro Preview
+--------------------
+Model Name: models/gemini-3-pro-image-preview
+Display Name: Nano Banana Pro
+--------------------
+Model Name: models/nano-banana-pro-preview
+Display Name: Nano Banana Pro
+--------------------
+Model Name: models/gemini-robotics-er-1.5-preview
+Display Name: Gemini Robotics-ER 1.5 Preview
+--------------------
+Model Name: models/gemini-2.5-computer-use-preview-10-2025
+Display Name: Gemini 2.5 Computer Use Preview 10-2025
+--------------------
+Model Name: models/embedding-001
+Display Name: Embedding 001
+--------------------
+Model Name: models/text-embedding-004
+Display Name: Text Embedding 004
+--------------------
+Model Name: models/gemini-embedding-exp-03-07
+Display Name: Gemini Embedding Experimental 03-07
+--------------------
+Model Name: models/gemini-embedding-exp
+Display Name: Gemini Embedding Experimental
+--------------------
+Model Name: models/gemini-embedding-001
+Display Name: Gemini Embedding 001
+--------------------
+Model Name: models/aqa
+Display Name: Model that performs Attributed Question Answering.
+--------------------
+Model Name: models/imagen-4.0-generate-preview-06-06
+Display Name: Imagen 4 (Preview)
+--------------------
+Model Name: models/imagen-4.0-ultra-generate-preview-06-06
+Display Name: Imagen 4 Ultra (Preview)
+--------------------
+Model Name: models/imagen-4.0-generate-001
+Display Name: Imagen 4
+--------------------
+Model Name: models/imagen-4.0-ultra-generate-001
+Display Name: Imagen 4 Ultra
+--------------------
+Model Name: models/imagen-4.0-fast-generate-001
+Display Name: Imagen 4 Fast
+--------------------
+Model Name: models/veo-2.0-generate-001
+Display Name: Veo 2
+--------------------
+Model Name: models/veo-3.0-generate-001
+Display Name: Veo 3
+--------------------
+Model Name: models/veo-3.0-fast-generate-001
+Display Name: Veo 3 fast
+--------------------
+Model Name: models/veo-3.1-generate-preview
+Display Name: Veo 3.1
+--------------------
+Model Name: models/veo-3.1-fast-generate-preview
+Display Name: Veo 3.1 fast
+--------------------
+Model Name: models/gemini-2.5-flash-native-audio-latest
+Display Name: Gemini 2.5 Flash Native Audio Latest
+--------------------
+Model Name: models/gemini-2.5-flash-native-audio-preview-09-2025
+Display Name: Gemini 2.5 Flash Native Audio Preview 09-2025
+--------------------
 ```
 <!-- END_MODELS_OUTPUT -->
 
