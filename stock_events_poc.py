@@ -82,12 +82,13 @@ def generate_market_csv(update_readme_flag=False):
     Columns Guidelines:
     - "類別" (Category): e.g., 公司行動, 經濟數據, 市場機制.
     - "子類別" (Sub-category): e.g., 法說會, 除權息, 財報發布, 利率決策.
-    - "Link1", "Link2": specific source URLs found during your search verifying the event.
+    "Link1", "Link2": specific source URLs found during your search verifying the event.
     
     Rules:
     - Dates must be in YYYY-MM-DD format.
     - Do not include markdown code block markers (like ```csv). Just the raw CSV text.
     - Ensure chinese characters are traditional chinese (繁體中文).
+    - MANDATORY: You must populate "Link1" with the source URL for every event. If a direct link is not available, use the search result link. Do not leave "Link1" empty.
     """
 
     print("Sending request to Gemini 2.5 Flash with Google Search...")
@@ -95,7 +96,7 @@ def generate_market_csv(update_readme_flag=False):
     try:
         # Enable Google Search Tool
         response = client.models.generate_content(
-            model="gemini-2.5-pro",
+            model="gemini-2.5-flash",
             contents=prompt,
             config=types.GenerateContentConfig(
                 tools=[types.Tool(google_search=types.GoogleSearch())],
