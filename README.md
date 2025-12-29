@@ -253,14 +253,18 @@ Parses unstructured financial news text and extracts stock market events into a 
 *   **Output:** `market_events.csv`
 
 <!-- START_EVENTS_OUTPUT -->
-產生時間: 2025-12-22 02:55:37 CST
+產生時間: 2025-12-29 03:01:35 CST
 
 ```csv
-類別,子類別,事件名稱,開始日期,結束日期,備註,Link1,Link2
-類別,子類別,事件名稱,開始日期,結束日期,備註,Link1,Link2
-市場機制,台灣股市休市,行憲紀念日休市,2025-12-25,2025-12-25,台灣證券交易所與櫃買中心休市一日,,
-經濟數據,非農就業報告,美國非農就業報告 (2025年11月數據),2025-12-16,2025-12-16,美國勞工統計局公布11月非農就業數據,,
-經濟數據,通貨膨脹報告,美國CPI報告 (2025年11月數據),2025-12-18,2025-12-18,美國勞工統計局公布11月消費者物價指數(CPI)數據,,
+"類別", "子類別", "事件名稱", "開始日期", "結束日期", "備註", "Link1", "Link2"
+"市場機制", "市場休市", "元旦 (中華民國開國紀念日) 補假", "2026-01-01", "2026-01-01", "台灣證券交易所 (TWSE) 及櫃買中心 (TPEx) 休市一日", "https://tradinghours.com/exchanges/twse/holidays/2026", "https://tradinghours.com/exchanges/tpex/holidays/2026"
+"公司行動", "法說會", "富喬 (1815.TWO) 法人說明會", "2025-12-31", "2025-12-31", "參加富邦證券舉辦之法人說明會", "https://tw.stock.yahoo.com/news/36%E5%AE%B612%E6%9C%88%E6%B3%95%E8%AA%AA%E9%96%8B%E8%B7%91-000851413.html", "https://www.moneydj.com/us/news/new/527845/%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E6%AB%83%E8%B2%B7%E5%85%AC%E5%8F%B8%E6%B3%95%E4%BA%BA%E8%AA%AA%E6%98%8E%E6%9C%83%E8%A1%8C%E4%BA%8B%E6%9B%86"
+"公司行動", "法說會", "鳳凰 (5706.TW) 法人說明會", "2025-12-31", "2025-12-31", "公司自辦法人說明會", "https://tw.stock.yahoo.com/news/36%E5%AE%B612%E6%9C%88%E6%B3%95%E8%AA%AA%E9%96%8B%E8%B7%91-000851413.html", "https://www.moneydj.com/us/news/new/527845/%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E6%AB%83%E8%B2%B7%E5%85%AC%E5%8F%B8%E6%B3%95%E4%BA%BA%E8%AA%AA%E6%98%8E%E6%9C%83%E8%A1%8C%E4%BA%8B%E6%9B%86"
+"公司行動", "法說會", "佳必琪 (6197.TW) 法人說明會", "2025-12-31", "2025-12-31", "參加元大證券舉辦之「線上法人說明會」", "https://www.moneydj.com/us/news/new/527845/%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E6%AB%83%E8%B2%B7%E5%85%AC%E5%8F%B8%E6%B3%95%E4%BA%BA%E8%AA%AA%E6%98%8E%E6%9C%83%E8%A1%8C%E4%BA%8B%E6%9B%86", ""
+"公司行動", "法說會", "億而得-創 (6423.TW) 上櫃前業績發表會", "2025-12-31", "2025-12-31", "公司召開上櫃前業績發表會", "https://www.moneydj.com/us/news/new/527845/%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E6%AB%83%E8%B2%B7%E5%85%AC%E5%8F%B8%E6%B3%95%E4%BA%BA%E8%AA%AA%E6%98%8E%E6%9C%83%E8%A1%8C%E4%BA%8B%E6%9B%86", ""
+"公司行動", "法說會", "金麗-KY (8429.TW) 法人說明會", "2025-12-31", "2025-12-31", "公司召開法人說明會", "https://tw.stock.yahoo.com/news/36%E5%AE%B612%E6%9C%88%E6%B3%95%E8%AA%AA%E9%96%8B%E8%B7%91-000851413.html", "https://www.moneydj.com/us/news/new/527845/%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E6%AB%83%E8%B2%B7%E5%85%AC%E5%8F%B8%E6%B3%95%E4%BA%BA%E8%AA%AA%E6%98%8E%E6%9C%83%E8%A1%8C%E4%BA%8B%E6%9B%86"
+"公司行動", "法說會", "兆豐金 (2886.TW) 法人說明會", "2026-01-05", "2026-01-05", "參加投資人會議", "https://tw.stock.yahoo.com/news/36%E5%AE%B612%E6%9C%88%E6%B3%95%E8%AA%AA%E9%96%8B%E8%B7%91-000851413.html", "https://www.moneydj.com/us/news/new/527845/%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E6%AB%83%E8%B2%B7%E5%85%AC%E5%8F%B8%E6%B3%95%E4%BA%BA%E8%AA%AA%E6%98%8E%E6%9C%83%E8%A1%8C%E4%BA%8B%E6%9B%86"
+"公司行動", "法說會", "永豐金 (2890.TW) 法人說明會", "2026-01-05", "2026-01-05", "參加Goldman Sachs舉辦之投資人會議", "https://tw.stock.yahoo.com/news/36%E5%AE%B612%E6%9C%88%E6%B3%95%E8%AA%AA%E9%96%8B%E8%B7%91-000851413.html", "https://www.moneydj.com/us/news/new/527845/%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E6%AB%83%E8%B2%B7%E5%85%AC%E5%8F%B8%E6%B3%95%E4%BA%BA%E8%AA%AA%E6%98%8E%E6%9C%83%E8%A1%8C%E4%BA%8B%E6%9B%86"
 ```
 <!-- END_EVENTS_OUTPUT -->
 
