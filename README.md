@@ -253,13 +253,14 @@ Parses unstructured financial news text and extracts stock market events into a 
 *   **Output:** `market_events.csv`
 
 <!-- START_EVENTS_OUTPUT -->
-產生時間: 2026-01-05 03:05:57 CST
+產生時間: 2026-01-11 09:11:43 CST
 
 ```csv
 類別,子類別,事件名稱,開始日期,結束日期,備註,Link1,Link2
-市場機制,台灣股市休市,中華民國開國紀念日,2026-01-01,2026-01-01,台灣證券交易所與證券櫃檯買賣中心休市一日,,
-公司行動,營收報告,台積電2025年12月營收報告,2026-01-09,2026-01-09,台灣積體電路製造股份有限公司公布2025年12月份營業額報告,,
-經濟數據,非農就業報告,美國2025年12月非農就業報告,2026-01-09,2026-01-09,美國勞工統計局公布2025年12月就業情況報告,包含非農就業數據 (美東時間上午8:30),,
+公司行動,法說會,台積電 (TSMC) 2025年第四季財報電話會議,2026-01-15,2026-01-15,"2025年第四季財報發布與電話會議 (台灣時間 14:00)，靜默期為2026年1月5日至1月14日。",https://pr.tsmc.com/english/news/2926,https://www.marketscreener.com/quote/stock/TAIWAN-SEMICONDUCTOR-MANUFAC-6492572/company/
+經濟數據,非農就業數據,美國2025年12月非農就業報告,2026-01-09,2026-01-09,美國勞工部發布2025年12月非農就業報告 (美國東部時間 08:30 AM)。,https://www.ebcfinancialgroup.com/news/when-is-the-next-us-non-farm-payrolls-report-released,https://www.investing.com/economic-calendar/nonfarm-payrolls-29
+經濟數據,消費者物價指數,美國2025年12月消費者物價指數 (CPI),2026-01-13,2026-01-13,美國勞工統計局發布2025年12月消費者物價指數 (美國東部時間 08:30 AM EST)。,https://www.investopedia.com/december-cpi-report-expected-show-inflation-elevated-but-doubts-remain-about-data-12239638,https://www.inflationtool.com/consumer-price-index-release-schedule
+經濟數據,生產者物價指數,美國2025年11月生產者物價指數 (PPI),2026-01-14,2026-01-14,美國勞工統計局發布2025年11月生產者物價指數 (美國東部時間 08:30 AM ET)。,https://www.bls.gov/ppi/schedule.htm,https://www.bls.gov/ppi/
 ```
 <!-- END_EVENTS_OUTPUT -->
 
