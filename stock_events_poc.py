@@ -1,6 +1,8 @@
 import os
 import argparse
 import datetime
+import csv
+import io
 from datetime import timedelta
 from google import genai
 from google.genai import types
@@ -82,7 +84,7 @@ def generate_market_csv(update_readme_flag=False):
     Columns Guidelines:
     - "類別" (Category): e.g., 公司行動, 經濟數據, 市場機制.
     - "子類別" (Sub-category): e.g., 法說會, 除權息, 財報發布, 利率決策.
-    "Link1", "Link2": specific source URLs found during your search verifying the event.
+    - "Link1", "Link2": specific source URLs found during your search verifying the event.
     
     Rules:
     - Dates must be in YYYY-MM-DD format.
@@ -110,14 +112,62 @@ def generate_market_csv(update_readme_flag=False):
         if csv_content.startswith("```"):
             csv_content = csv_content.strip("`").replace("csv\n", "", 1)
 
-        # 4. Save to File
+        # 4. Save to File (Append with Deduplication)
         output_file = "market_events.csv"
-        with open(output_file, "w", encoding="utf-8") as f:
-            f.write(csv_content)
-            
-        print(f"Successfully generated '{output_file}'.")
+        
+        # Parse the new content
+        new_events = []
+        header = None
+        try:
+            reader = csv.reader(io.StringIO(csv_content))
+            rows = list(reader)
+            if rows:
+                header = rows[0]
+                new_events = rows[1:]
+        except csv.Error as e:
+             print(f"Error parsing CSV response: {e}")
+             return
+
+        # Load existing keys (Name + StartDate) to prevent duplicates
+        existing_keys = set()
+        write_header = True
+        
+        if os.path.exists(output_file):
+            write_header = False
+            try:
+                with open(output_file, "r", encoding="utf-8") as f:
+                    reader = csv.reader(f)
+                    for i, row in enumerate(reader):
+                        if i == 0: continue # Skip header
+                        if len(row) >= 4:
+                            # Key: Event Name + Start Date
+                            key = (row[2].strip(), row[3].strip())
+                            existing_keys.add(key)
+            except Exception as e:
+                print(f"Warning: Could not read existing file for deduplication: {e}")
+                # If read fails, maybe overwrite or append anyway? Let's proceed to append what we can.
+
+        rows_to_append = []
+        for row in new_events:
+            if len(row) >= 4:
+                key = (row[2].strip(), row[3].strip())
+                if key not in existing_keys:
+                    rows_to_append.append(row)
+                    existing_keys.add(key) # Add to set to prevent duplicates within the new batch
+
+        if rows_to_append:
+            mode = "a" if os.path.exists(output_file) else "w"
+            with open(output_file, mode, encoding="utf-8", newline="") as f:
+                writer = csv.writer(f)
+                if write_header and header:
+                    writer.writerow(header)
+                writer.writerows(rows_to_append)
+            print(f"Successfully appended {len(rows_to_append)} new events to '{output_file}'.")
+        else:
+            print(f"No new unique events found to append to '{output_file}'.")
+
         print("-" * 30)
-        print(csv_content)
+        print(csv_content) # Still print the full generated content for visibility
         print("-" * 30)
 
         if update_readme_flag:
