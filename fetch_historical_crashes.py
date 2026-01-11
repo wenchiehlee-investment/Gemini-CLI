@@ -20,7 +20,7 @@ def generate_historical_crashes():
     prompt = """
     You are a financial historian.
     
-    Task: Search for and extract a list of CRITICAL historical events from 1990 to the present that caused significant stock market drops (crashes, corrections, or bear markets) in either the Global (US) or Taiwan markets.
+    Task: Search for and extract a list of the TOP 100 CRITICAL historical events from 1990 to the present that caused significant stock market drops (crashes, corrections, or bear markets) in either the Global (US) or Taiwan markets.
     
     Focus on these specific Categories (類別) and Sub-categories (子類別):
     
@@ -53,10 +53,14 @@ def generate_historical_crashes():
     
     Requirements:
     - Language: All text must be in Traditional Chinese (繁體中文).
-    - Dates: Format YYYY-MM-DD. If an exact day is hard to define for a long crisis, use the start date of the major market crash.
-    - "備註" (Note): Briefly explain the impact (e.g., "台股跌幅達...").
-    - "Link1": MANDATORY. Provide a reliable source URL (News, Wikipedia, or Financial History site).
-    - Limit: Find at least 15-20 distinct major events spanning 1990-2024.
+    - Dates: Format YYYY-MM-DD.
+    - "備註" (Note): Briefly explain the impact (e.g., "跌幅達...").
+    - "Link1": MANDATORY. Provide a reliable source URL.
+    - Quantity & Distribution: Find roughly 40 events in total, distributed as follows:
+        * 1990-1999: ~10 events
+        * 2000-2009: ~10 events
+        * 2010-2019: ~10 events
+        * 2020-Present: ~10 events
     - Do not include markdown code block markers.
     """
 
@@ -78,7 +82,7 @@ def generate_historical_crashes():
         if csv_content.startswith("```"):
             csv_content = csv_content.strip("`").replace("csv\n", "", 1)
 
-        output_file = "historical_crashes.csv"
+        output_file = "historical_crashes-gemini3.csv"
         
         with open(output_file, "w", encoding="utf-8-sig", newline="") as f:
             f.write(csv_content)
