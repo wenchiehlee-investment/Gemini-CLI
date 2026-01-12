@@ -253,14 +253,25 @@ Parses unstructured financial news text and extracts stock market events into a 
 *   **Output:** `market_events.csv`
 
 <!-- START_EVENTS_OUTPUT -->
-產生時間: 2026-01-11 09:11:43 CST
+產生時間: 2026-01-12 03:01:31 CST
 
 ```csv
-類別,子類別,事件名稱,開始日期,結束日期,備註,Link1,Link2
-公司行動,法說會,台積電 (TSMC) 2025年第四季財報電話會議,2026-01-15,2026-01-15,"2025年第四季財報發布與電話會議 (台灣時間 14:00)，靜默期為2026年1月5日至1月14日。",https://pr.tsmc.com/english/news/2926,https://www.marketscreener.com/quote/stock/TAIWAN-SEMICONDUCTOR-MANUFAC-6492572/company/
-經濟數據,非農就業數據,美國2025年12月非農就業報告,2026-01-09,2026-01-09,美國勞工部發布2025年12月非農就業報告 (美國東部時間 08:30 AM)。,https://www.ebcfinancialgroup.com/news/when-is-the-next-us-non-farm-payrolls-report-released,https://www.investing.com/economic-calendar/nonfarm-payrolls-29
-經濟數據,消費者物價指數,美國2025年12月消費者物價指數 (CPI),2026-01-13,2026-01-13,美國勞工統計局發布2025年12月消費者物價指數 (美國東部時間 08:30 AM EST)。,https://www.investopedia.com/december-cpi-report-expected-show-inflation-elevated-but-doubts-remain-about-data-12239638,https://www.inflationtool.com/consumer-price-index-release-schedule
-經濟數據,生產者物價指數,美國2025年11月生產者物價指數 (PPI),2026-01-14,2026-01-14,美國勞工統計局發布2025年11月生產者物價指數 (美國東部時間 08:30 AM ET)。,https://www.bls.gov/ppi/schedule.htm,https://www.bls.gov/ppi/
+"類別", "子類別", "事件名稱", "開始日期", "結束日期", "備註", "Link1", "Link2"
+"公司行動", "財報發布", "台積電 (TSMC) 2025年第四季財報發布暨法說會", "2026-01-15", "2026-01-15", "預計台灣時間下午2點舉行，討論2025年第四季財報。", "https://www.tsmc.com/english/investorRelations/quarterlyResults/2025/Q4", ""
+"經濟數據", "勞動市場", "美國非農就業報告 (2025年12月)", "2026-01-09", "2026-01-09", "美國勞工統計局公布，東部時間上午8:30。", "https://www.bls.gov/schedule/news_release/empsit.htm", ""
+"經濟數據", "通貨膨脹", "美國消費者物價指數 (CPI) (2025年12月)", "2026-01-13", "2026-01-13", "美國勞工統計局公布，東部時間上午8:30。", "https://www.bls.gov/schedule/news_release/cpi.htm", ""
+"經濟數據", "通貨膨脹", "美國生產者物價指數 (PPI) (2025年11月)", "2026-01-14", "2026-01-14", "美國勞工統計局公布，東部時間上午8:30。", "https://www.bls.gov/schedule/news_release/ppi.htm", ""
+"公司行動", "除權", "御嵿 (3522) 除權", "2026-01-12", "2026-01-12", "無償配股率0.2378。", "https://histock.tw/stock/three.aspx?id=3522", ""
+"公司行動", "除息", "朋億* (6613) 除息", "2026-01-12", "2026-01-12", "現金股利3元。", "https://histock.tw/stock/three.aspx?id=6613", ""
+"公司行動", "除息", "綠界科技* (6763) 除息", "2026-01-12", "2026-01-12", "現金股利0.95元。", "https://histock.tw/stock/three.aspx?id=6763", ""
+"公司行動", "現金增資", "御嵿 (3522) 現金增資", "2026-01-12", "2026-01-12", "發行新股。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
+"公司行動", "現金增資", "尖點 (8021) 現金增資", "2026-01-13", "2026-01-13", "發行新股。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
+"公司行動", "現金增資", "健亞 (4130) 現金增資", "2026-01-14", "2026-01-14", "發行新股。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
+"公司行動", "除息", "聖暉* (5536) 除息", "2026-01-15", "2026-01-15", "現金股利5.5元。", "https://www.win.tw/stock/dividend-forecast/", ""
+"公司行動", "除息", "路易莎咖啡 (2758) 除息", "2026-01-15", "2026-01-15", "現金股利1元。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
+"公司行動", "現金增資", "宣德 (5457) 現金增資", "2026-01-15", "2026-01-15", "發行新股。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
+"公司行動", "除息", "多檔ETF及公司除息", "2026-01-16", "2026-01-16", "包括台新AI優息動能(00962)等多檔ETF及公司。", "https://www.win.tw/stock/dividend-forecast/", ""
+"公司行動", "除權息", "多檔ETF及公司除權息", "2026-01-19", "2026-01-19", "包括中信高評級公司債(00772B)等多檔ETF及公司。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
 ```
 <!-- END_EVENTS_OUTPUT -->
 
