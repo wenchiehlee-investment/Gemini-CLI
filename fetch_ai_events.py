@@ -14,32 +14,38 @@ def generate_ai_events():
 
     client = genai.Client(api_key=api_key)
 
-    print("Fetching major AI events (History to Present)...")
+    print("Fetching major AI events (Market & Business Impact)...")
 
     prompt = """
-    You are a Technology Historian specializing in Artificial Intelligence.
+    You are a Financial Technology Analyst.
     
-    Task: Search for and extract a list of the TOP 50-100 CRITICAL events in the history of Artificial Intelligence, with a heavy focus on the modern "Deep Learning" and "Generative AI" eras (2010-Present), but also including foundational milestones.
+    Task: Search for and extract a list of the TOP 50-100 CRITICAL Artificial Intelligence events that significantly impacted the **Stock Market, Corporate Valuations, or the Business Landscape**.
     
+    Focus on events that:
+    1. Caused noticeable stock price movements (e.g., NVIDIA, Microsoft, Google, TSM).
+    2. Triggered major M&A (Mergers & Acquisitions) or huge Venture Capital investments.
+    3. Launched products that disrupted industries or created new revenue streams.
+    4. Influenced market sentiment or regulatory environments affecting business operations (e.g., Chip bans).
+
     Focus on these specific Categories (類別) and Sub-categories (子類別):
     
-    1. 技術突破 (Technological Breakthrough):
-       - 演算法創新 (Algorithm) - e.g., Transformer Paper (Attention Is All You Need), AlphaGo, AlexNet.
-       - 模型架構 (Model Architecture) - e.g., BERT, GANs, Diffusion Models.
-    
-    2. 產品發布 (Product Launch):
-       - 生成式AI (Generative AI) - e.g., ChatGPT, GPT-4, Claude, Gemini, Midjourney, Stable Diffusion.
-       - 語音與助理 (Voice & Assistants) - e.g., Siri, Alexa (early days).
-       - 硬體晶片 (Hardware) - e.g., NVIDIA H100, Google TPU launch.
-    
-    3. 產業動態 (Industry Dynamics):
-       - 企業併購與投資 (M&A & Investment) - e.g., Microsoft invests in OpenAI, Google acquires DeepMind.
-       - 公司人事 (Corporate Events) - e.g., Sam Altman firing/rehiring, founding of OpenAI.
-       - 市值里程碑 (Market Cap) - e.g., NVIDIA becomes most valuable company.
-    
-    4. 政策與倫理 (Policy & Ethics):
-       - 監管法規 (Regulation) - e.g., EU AI Act, US Executive Order on AI.
-       - 安全與爭議 (Safety & Controversy) - e.g., Deepfake scandals, AI Safety Summit.
+    1. 市場與資本 (Market & Capital):
+       - 市值里程碑 (Market Cap Milestones) - e.g., NVIDIA hits $3T, Microsoft overtakes Apple due to AI.
+       - 併購與投資 (M&A & Investment) - e.g., Microsoft invests $10B in OpenAI, Google buys DeepMind.
+       - 股價波動 (Stock Movement) - e.g., Super Micro Computer surge, Chegg crash due to ChatGPT.
+
+    2. 產品發布與商業化 (Product & Commercialization):
+       - 生成式AI應用 (Generative AI Apps) - e.g., ChatGPT launch (sparked AI arms race), Copilot launch.
+       - 企業級解決方案 (Enterprise Solutions) - e.g., Salesforce AI integration.
+       - 硬體與基礎設施 (Hardware & Infra) - e.g., H100 announcement (AI gold rush), AMD MI300.
+
+    3. 技術突破與轉折點 (Tech Breakthroughs as Market Catalysts):
+       - 關鍵論文 (Seminal Papers) - e.g., "Attention Is All You Need" (foundation of modern value creation).
+       - 模型發布 (Model Releases) - e.g., GPT-4 (set new industry standard).
+
+    4. 政策與監管衝擊 (Regulation & Policy Impact):
+       - 貿易限制 (Trade Restrictions) - e.g., US bans AI chip exports to China (impacted NVIDIA/AMD stocks).
+       - 監管審查 (Regulation Scrutiny) - e.g., Antitrust investigations into AI partnerships.
     
     Output Format:
     Produce a valid CSV file content with the following headers:
@@ -47,9 +53,9 @@ def generate_ai_events():
     
     Requirements:
     - Language: All text must be in Traditional Chinese (繁體中文).
-    - Dates: Format YYYY-MM-DD. For research papers, use the publication date.
-    - "備註" (Note): Briefly explain the significance (e.g., "開啟了生成式AI熱潮").
-    - "Link1": MANDATORY. Provide a reliable source URL (arXiv, TechCrunch, Official Blog, News).
+    - Dates: Format YYYY-MM-DD.
+    - "備註" (Note): **Crucial**: Explain the *Business/Market Impact* (e.g., "NVIDIA股價當日上漲24%", "微軟市值超越蘋果", "引發AI軍備競賽").
+    - "Link1": MANDATORY. Provide a reliable source URL (Bloomberg, CNBC, Reuters, TechCrunch).
     - Quantity: Aim for ~40-50 distinct high-impact events.
     - Do not include markdown code block markers.
     """
