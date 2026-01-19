@@ -253,25 +253,24 @@ Parses unstructured financial news text and extracts stock market events into a 
 *   **Output:** `market_events.csv`
 
 <!-- START_EVENTS_OUTPUT -->
-產生時間: 2026-01-12 03:01:31 CST
+產生時間: 2026-01-19 03:02:03 CST
 
 ```csv
-"類別", "子類別", "事件名稱", "開始日期", "結束日期", "備註", "Link1", "Link2"
-"公司行動", "財報發布", "台積電 (TSMC) 2025年第四季財報發布暨法說會", "2026-01-15", "2026-01-15", "預計台灣時間下午2點舉行，討論2025年第四季財報。", "https://www.tsmc.com/english/investorRelations/quarterlyResults/2025/Q4", ""
-"經濟數據", "勞動市場", "美國非農就業報告 (2025年12月)", "2026-01-09", "2026-01-09", "美國勞工統計局公布，東部時間上午8:30。", "https://www.bls.gov/schedule/news_release/empsit.htm", ""
-"經濟數據", "通貨膨脹", "美國消費者物價指數 (CPI) (2025年12月)", "2026-01-13", "2026-01-13", "美國勞工統計局公布，東部時間上午8:30。", "https://www.bls.gov/schedule/news_release/cpi.htm", ""
-"經濟數據", "通貨膨脹", "美國生產者物價指數 (PPI) (2025年11月)", "2026-01-14", "2026-01-14", "美國勞工統計局公布，東部時間上午8:30。", "https://www.bls.gov/schedule/news_release/ppi.htm", ""
-"公司行動", "除權", "御嵿 (3522) 除權", "2026-01-12", "2026-01-12", "無償配股率0.2378。", "https://histock.tw/stock/three.aspx?id=3522", ""
-"公司行動", "除息", "朋億* (6613) 除息", "2026-01-12", "2026-01-12", "現金股利3元。", "https://histock.tw/stock/three.aspx?id=6613", ""
-"公司行動", "除息", "綠界科技* (6763) 除息", "2026-01-12", "2026-01-12", "現金股利0.95元。", "https://histock.tw/stock/three.aspx?id=6763", ""
-"公司行動", "現金增資", "御嵿 (3522) 現金增資", "2026-01-12", "2026-01-12", "發行新股。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
-"公司行動", "現金增資", "尖點 (8021) 現金增資", "2026-01-13", "2026-01-13", "發行新股。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
-"公司行動", "現金增資", "健亞 (4130) 現金增資", "2026-01-14", "2026-01-14", "發行新股。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
-"公司行動", "除息", "聖暉* (5536) 除息", "2026-01-15", "2026-01-15", "現金股利5.5元。", "https://www.win.tw/stock/dividend-forecast/", ""
-"公司行動", "除息", "路易莎咖啡 (2758) 除息", "2026-01-15", "2026-01-15", "現金股利1元。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
-"公司行動", "現金增資", "宣德 (5457) 現金增資", "2026-01-15", "2026-01-15", "發行新股。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
-"公司行動", "除息", "多檔ETF及公司除息", "2026-01-16", "2026-01-16", "包括台新AI優息動能(00962)等多檔ETF及公司。", "https://www.win.tw/stock/dividend-forecast/", ""
-"公司行動", "除權息", "多檔ETF及公司除權息", "2026-01-19", "2026-01-19", "包括中信高評級公司債(00772B)等多檔ETF及公司。", "https://www.kgieworld.com.tw/DiviList.aspx", ""
+類別,子類別,事件名稱,開始日期,結束日期,備註,Link1,Link2
+市場機制,債券上市,緯穎開發股份有限公司115年度第1期有擔保普通公司債上市掛牌,2026-01-12,2026-01-12,證券代號：B81712,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwF1uSQPZjgsrPQ3xDoLnNidsWzRkMEYQRPU0WfJwHofgZKbBFipAcb1wh7cbIvOzPNhwfTvoKp_J_7Vs4VbevHnMnMkkkct8b2tEVvn1A0CAqGYiIkUdQi1sGXlJVvLtAuqdj3Y8TICcx48Zf2VgZacw949zPueUS69nkmn9VHGcgASwWH_OL3pf0YziombI=,
+公司行動,法說會,台積電 (2330) 2025年第四季法說會,2026-01-15,2026-01-15,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRKzzOR10i-VYp9E7KnorlcOvJZdvYFQvRwS44uWeq91VpsS9fLYf1OsFkFnDw7vdFnhebky8bLEUAV7504dyphPjskM1OQZhHztYp2gjM-_FrcTZuOZZn2ye4f-Ton1c=,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG7p44C7dr3H1X6KdwfbZUrDLUGhs2PlQ7xX5b67GnLWAs-lrvjMTO-dJQt5UcFdgS01U48C2ZeXSLW3VlyctjHoyBEyc7XWTXRSeZA7afgRfZ49VKeJ1IxNmwHcUPnOPfzDxthWn24c1-xnW96QU=
+經濟數據,物價指數,美國2025年12月消費者物價指數 (CPI) 公佈,2026-01-13,2026-01-13,公佈12月數據,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1Z0EaFYRAVNQrPmgBSh4vzTfeNFWPBFhGNjcbevr6B79HFgCIXeMKZfqJ8yeONJ9Pvd_2JVEm8ahhBcy86IjGoj9MoNpVf2TsqJ40qIrhB2662x6ND02itYiN26g3VXwU-6vQnMAM=,
+公司行動,減資,台泥 (1101) 註銷庫藏股減資基準日,2026-01-13,2026-01-13,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEn1vr27qVDNSeR0EkA4GyQeXl0G-s3f9V9o75L4arX23cNMQHmPHrx8sDKGVUUNBPxdQdokghZTuX_ZARdaM3mYOC7LHYsnUx0bVk6ADWI2TkXDelrRRd98m_ogyM1uRvei_MXJzITKVknRub6myodPfBXSZtXV1uOviHXSWg9nq6b2-Btzei6joJtWquAkvnnYYTJTF5oXCQ7kad51mhu9hPQyBMOl1_J4rhTHz1OWex243fDAzAwD72iFf_WXt5xoGeBz00PpIPcFKsQ__JoUal-ed0n8LYM0xVQLEkClVfo80DESgeMQLgCCb03QLk13aVhRGX4bQ1lBrri5GGXO9JVt3F3xa47dZN1XdCij6kF0G6qQtHW693GkojSXYntBHawDOj9mNMjlx-6mN8Bzi-hAjQ0HqiqVmtvftlakzR7zxw=,
+經濟數據,物價指數,美國2025年11月生產者物價指數 (PPI) 公佈,2026-01-14,2026-01-14,公佈11月數據,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQl-G8RDwYEUoVfllWhGkgMivDUUQf_DpKqXgPccQwOfI9kTJnfkdqj5OSkCJjoQlqifUVaguW3hdFkG6Llyt-7M7ZFkmXVOttlw4QWa0vDU3JUy91S9jsXoX-8bOz_TEHXVM86jIL=,
+公司行動,減資,北基 (8927) 註銷庫藏股減資變更登記完成,2026-01-16,2026-01-16,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3qXHU6owBc1lXNZoFDerjPwTIZ5vTvolY8eFoYGOaeVzdO2mM8GDOCFOXbyT4AK7GXxfblqXf9JPFI5InpoyMfvupOrcFuC9Ih7_2cDO2HaS0WfMvlfQGGyCceop6my19qp2Uv9IcK_-4H3tw8YY29_fPf9mX9SCKEIdZcDB4I9IJKwU7BtKUhqzhObMyt5fWavZn2E3j6YCpRwhWFxN7zf9L_-SkJIOh-suV4f63u1z4knG-dpT7OrlFrqo5GvFLNYdcZQcc0rHqae6U_z6XMVamiskdYqinEo3pLdBARwm4W66HkRu7wEA_Q2J8L6jc77gs7HVjcs1dON2ludUO4bkyv-aUwwNAH-TWV8xucBuuSLsNvzk=,
+公司行動,減資,上緯投控 (3709) 買回庫藏股註銷減資基準日,2026-01-19,2026-01-19,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEn1vr27qVDNSeR0EkA4GyQeXl0G-s3f9V9o75L4arX23cNMQHmPHrx8sDKGVUUNBPxdQdokghZTuX_ZARdaM3mYOC7LHYsnUx0bVk6ADWI2TkXDelrRRd98m_ogyM1uRvei_MXJzITKVknRub6myodPfBXSZtXV1uOviHXSWg9nq6b2-Btzei6joJtWquAkvnnYYTJTF5oXCQ7kad51mhu9hPQyBMOl1_J4rhTHz1OWex243fDAzAwD72iFf_WXt5xoGeBz00PpIPcFKsQ__JoUal-ed0n8LYM0xVQLEkClVfo80DESgeMQLgCCb03QLk13aVhRGX4bQ1lBrri5GGXO9JVt3F3xa47dZN1XdCij6kF0G6qQtHW693GkojSXYntBHawDOj9mNMjlx-6mN8Bzi-hAjQ0HqiqVmtvftlakzR7zxw=,
+公司行動,股東臨時會,同方友友-DR (911868) 股東臨時會,2026-01-19,2026-01-19,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9Y7KtdVnRDzjVkaU9ZzwcopNiF-KY6HA78qIZW6zmLYkTLe99nKEGiliFDj40ovy-3v5vhU4_OqM6TqHjpjcjAOAwtJ1dV0a7306SU0aDmHhzJuc-V7he7IjXPEiotRt7rJ4z6oU4vqA6aPFPLej0kw==,
+市場機制,上市審議,櫃買中心審議委員會審議GREENET CO., LTD.上櫃申請案,2026-01-20,2026-01-20,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPpHkxTwGjTLUxfLX4W60CN8mAWmvwO539os45ifvQFU3eEQwf3T7y-2vFgRaxyHh_HOtz6SQHciO3lprr_1Jto9bu5UFnT3uIyP8o82HCg7Hbl6A91t0mIGc4TmP9GPiB7a3ZbPYwwThnIxK5CKEMVmboBTFW=,
+公司行動,增資股票上市,傑霖科技 (8102) 增資普通股股票開始櫃檯買賣,2026-01-20,2026-01-20,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGoFM-brlke4cvb6aVAzJ5RbRLe6l29K9OcklZtLh9r3e3378skNz0PqGt4g_TcokRf-4fW8Txg61y_VRC8r2fI1-9vydyOa1Vnnl8HmofSOi77jRbHPabm-BE-ULUIZzz6DYcb98KAU7u9f4qDo3WB9uOCabGpYxw90VkftssmGVfnkcyI1W_n6O46jVN4XgHajw25qvnGPKcsQWfxYlAOU8XWNemJnkwVT8sBG_Pgm0=,
+公司行動,股東臨時會,三貝德 (8489) 股東臨時會,2026-01-22,2026-01-22,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9Y7KtdVnRDzjVkaU9ZzwcopNiF-KY6HA78qIZW6zmLYkTLe99nKEGiliFDj40ovy-3v5vhU4_OqM6TqHjpjcjAOAwtJ1dV0a7306SU0aDmHhzJuc-V7he7IjXPEiotRt7rJ4z6oU4vqA6aPFPLej0kw==,
+公司行動,股東臨時會,三商壽 (2867) 股東臨時會,2026-01-23,2026-01-23,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9Y7KtdVnRDzjVkaU9ZzwcopNiF-KY6HA78qIZW6zmLYkTLe99nKEGiliFDj40ovy-3v5vhU4_OqM6TqHjpjcjAOAwtJ1dV0a7306SU0aDmHhzJuc-V7he7IjXPEiotRt7rJ4z6oU4vqA6aPFPLej0kw==,
+公司行動,股東臨時會,玉山金 (2884) 股東臨時會,2026-01-23,2026-01-23,,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9Y7KtdVnRDzjVkaU9ZzwcopNiF-KY6HA78qIZW6zmLYkTLe99nKEGiliFDj40ovy-3v5vhU4_OqM6TqHjpjcjAOAwtJ1dV0a7306SU0aDmHhzJuc-V7he7IjXPEiotRt7rJ4z6oU4vqA6aPFPLej0kw==,
+公司行動,除權息,國泰新興市場5年期(以上)美元息收投資等級債券基金 (00726B) 最後申購日,2026-01-26,2026-01-26,參與配息最後申購日,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgQ1p3b2Bdw70XEBqk02gXkKuNsBwKsEVR15vx6tLnYFJjZf6EDqs9DUbmB4MrfbdWPC6bzeYoCSJgQUsrDZ6BarnJDsWtakkDLgEBTtbwwOEKRM8_QGisZEAt-ALupfb7MAEufID2EXK5ztHkT1mi,
 ```
 <!-- END_EVENTS_OUTPUT -->
 
