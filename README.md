@@ -280,7 +280,7 @@ Queries the Google Cloud Service Usage API to report current "Requests Per Minut
 *   **Requires:** `gcloud` authentication and `GCP_PROJECT_ID`.
 
 <!-- START_QUOTA_OUTPUT -->
-產生時間: 2026-02-02 00:59:36 CST
+產生時間: 2026-02-09 01:01:48 CST
 
 ```text
 -------------------------------------------------------------------------------------
@@ -292,7 +292,7 @@ gemini-2.5-flash               | 5               | 10000           | 3000000
 gemini-2.5-flash-1p            | -               | -               | 3000000        
 gemini-2.5-flash-lite          | 10              | -1              | 3000000        
 gemini-2.5-flash-live          | -1              | -1              | 1000000        
-gemini-2.5-pro                 | 1000            | 10000           | 5000000        
+gemini-2.5-pro                 | 1000            | 1000            | 5000000        
 gemini-2.5-pro-1p-freebie      | 75              | 10000           | 1000000        
 -------------------------------------------------------------------------------------
 RPM = Requests Per Minute, RPD = Requests Per Day, TPM = Tokens Per Minute
