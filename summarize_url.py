@@ -87,9 +87,9 @@ if __name__ == "__main__":
     # 2. Summarize with Gemini
     print("Summarizing with Gemini 2.5 Flash...")
 
-    api_key = os.environ.get("GOOGLE_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("Error: GOOGLE_API_KEY environment variable not set")
+        print("Error: GEMINI_API_KEY environment variable not set")
         exit(1)
 
     client = genai.Client(api_key=api_key)

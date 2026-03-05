@@ -38,7 +38,7 @@ This project is a Python-based workspace for interacting with Google's Gemini AP
 - **Check API Quotas**: `python check_quota.py`
 
 ## Development Notes & Observations
-- **Security Update**: The hardcoded API key has been removed. Scripts now require the `GOOGLE_API_KEY` environment variable.
+- **Security Update**: The hardcoded API key has been removed. Scripts now require the `GEMINI_API_KEY` environment variable.
 - **Model Selection**:
     - `genai.py` and `summarize_url.py` have been switched to **`gemini-2.5-flash`** to avoid strict rate limits (2 RPM) on the Pro model's free tier.
     - `stock_events_poc.py` also uses `gemini-2.5-flash` for reliability.
