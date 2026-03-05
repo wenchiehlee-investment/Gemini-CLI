@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Script
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python ${{ inputs.script_name }} --update-readme
 
       - name: Commit and Push Changes

@@ -5,9 +5,9 @@ This project serves as a workspace for interacting with Google's Gemini API usin
 ## Prerequisites
 
 1.  **Python 3.8+** installed.
-2.  **Google GenAI API Key**: Set as an environment variable named `GOOGLE_API_KEY`.
+2.  **Google GenAI API Key**: Set as an environment variable named `GEMINI_API_KEY`.
     ```powershell
-    $env:GOOGLE_API_KEY="your_api_key_here"
+    $env:GEMINI_API_KEY="your_api_key_here"
     ```
 3.  **Google Cloud SDK (Required for `check_quota.py`)**:
     *   Install the [gcloud CLI](https://cloud.google.com/sdk/docs/install).

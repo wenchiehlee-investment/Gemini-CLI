@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Stock Events Extraction
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python stock_events_poc.py --update-readme
 
       - name: Upload CSV Artifact

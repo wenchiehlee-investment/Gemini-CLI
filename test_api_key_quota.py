@@ -7,11 +7,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Use environment variables instead of hardcoded strings
-api_key = os.environ.get("GOOGLE_API_KEY")
+api_key = os.environ.get("GEMINI_API_KEY")
 project_id = os.environ.get("GCP_PROJECT_ID")
 
 if not api_key:
-    print("Error: GOOGLE_API_KEY environment variable not set.")
+    print("Error: GEMINI_API_KEY environment variable not set.")
     sys.exit(1)
 
 if not project_id:
