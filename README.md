@@ -253,16 +253,15 @@ Parses unstructured financial news text and extracts stock market events into a 
 *   **Output:** `market_events.csv`
 
 <!-- START_EVENTS_OUTPUT -->
-產生時間: 2026-03-30 03:54:39 CST
+產生時間: 2026-04-06 03:53:26 CST
 
 ```csv
 類別,子類別,事件名稱,開始日期,結束日期,備註,Link1,Link2
-市場機制,休市,兒童節 (國定假日),2026-04-03,2026-04-03,台灣證券交易所與證券櫃檯買賣中心休市.,https://www.calendarlabs.com/holidays/tw/2026-twse-market-holidays,https://www.mr-market.com/2026-tw-stock-holiday-calendar.html
-市場機制,休市,清明節 (國定假日),2026-04-06,2026-04-06,台灣證券交易所與證券櫃檯買賣中心休市.,https://www.calendarlabs.com/holidays/tw/2026-twse-market-holidays,https://www.mr-market.com/2026-tw-stock-holiday-calendar.html
-經濟數據,利率決策,美國聯邦公開市場委員會 (FOMC) 會議結果公布,2026-03-18,2026-03-18,聯準會決議維持利率不變。儘管會議日期為3月17-18日，但結果與新聞發布會於3月18日公布，影響將持續至本報告區間內.,https://www.fsmone.com.hk/zh/research/article/2026-us-interest-rate-cut-fomc-meeting-schedule,https://finance.sina.com.cn/money/forex/forexroll/2026-03-27/doc-icnrzxkp2942476.shtml
-經濟數據,通貨膨脹數據,美國生產者物價指數 (PPI) 公布 (2月數據),2026-03-18,2026-03-18,公布2026年2月美國PPI數據，顯示通膨壓力仍強勁。儘管公布日期為3月18日，影響將持續至本報告區間內.,https://www.richpigeon.com.tw/2026/03/19/us-feb-ppi-surge-3-4-percent/,https://www.bls.gov/schedule/news_release/ppi.htm
-經濟數據,就業數據,美國非農就業報告 (NFP) 公布 (3月數據),2026-04-03,2026-04-03,公布2026年3月美國非農就業人數.,https://cn.investing.com/economic-calendar/nonfarm-payrolls-201,https://baijiahao.baidu.com/s?id=1787383965905001925
-公司行動,法說會,台積電 (2330) 2026年第一季法人說明會,2026-04-16,2026-04-16,公布2026年第一季財務報告及第二季業績展望。此事件發生於指定期間之後，但因其重要性仍列入.,https://news.cnyes.com/news/id/5502660,
+市場機制,市場休市,兒童節 (補假),2026-04-03,2026-04-03,台灣證券交易所及櫃買中心休市。兒童節 (4月4日) 適逢星期六，故於4月3日補假。,,
+市場機制,市場休市,民族掃墓節 (補假),2026-04-06,2026-04-06,台灣證券交易所及櫃買中心休市。清明節 (4月5日) 適逢星期日，故於4月6日補假。,,
+經濟數據,就業數據,美國非農就業報告 (3月),2026-04-03,2026-04-03,衡量美國勞動市場狀況的重要指標，可能影響全球金融市場。,https://www.investing.com/economic-calendar/nonfarm-payrolls-226,
+公司行動,財報相關,台積電 (2330.TW) 2026年Q1法說會靜默期,2026-04-06,2026-04-13,公司在此期間避免與投資界接觸。2026年Q1法說會預計於2026年4月16日舉行。,https://www.tsmc.com/english/investorRelations/quarterly_results,
+經濟數據,通貨膨脹數據,美國消費者物價指數 (CPI) (3月),2026-04-10,2026-04-10,衡量美國通脹水平的重要指標，可能影響聯準會貨幣政策。,https://www.inflationtool.com/consumer-price-index-release-schedule,
 ```
 <!-- END_EVENTS_OUTPUT -->
 
