@@ -253,18 +253,26 @@ Parses unstructured financial news text and extracts stock market events into a 
 *   **Output:** `market_events.csv`
 
 <!-- START_EVENTS_OUTPUT -->
-產生時間: 2026-04-20 04:15:37 CST
+產生時間: 2026-04-27 04:25:39 CST
 
 ```csv
-"類別", "子類別", "事件名稱", "開始日期", "結束日期", "備註", "Link1", "Link2"
-"公司行動", "法說會", "台積電 (TSMC) 2026年第一季法說會", "2026-04-16", "2026-04-16", "台灣時間下午2點舉行。", "https://www.tsmc.com/english/investorRelations/financial_calendar", "https://ir.tsmc.com/english/quarterly-results/2026/q1"
-"公司行動", "財報發布", "特斯拉 (Tesla) 2026年第一季財報發布", "2026-04-22", "2026-04-22", " ", "https://gotrade.com/blog/us-stocks-to-watch-this-earnings-season-april-2026", ""
-"經濟數據", "利率決策", "美國聯邦公開市場委員會 (FOMC) 會議", "2026-04-28", "2026-04-29", "政策聲明通常在第二天格林威治時間下午6點發布。此事件發生於指定期間結束後。", "https://www.equalsmoney.com/insights/fomc-meeting-dates", "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-"公司行動", "財報發布", "微軟 (Microsoft) 2026財年第三季財報發布與電話會議", "2026-04-29", "2026-04-29", "太平洋時間下午2:30舉行。此事件發生於指定期間結束後。", "https://news.microsoft.com/source/2026/04/08/microsoft-announces-quarterly-earnings-release-date-source/", "https://www.microsoft.com/en-us/investor/events/default.aspx"
-"公司行動", "財報發布", "Alphabet (Google) 2026年第一季財報發布與電話會議", "2026-04-29", "2026-04-29", "太平洋時間下午1:30舉行。此事件發生於指定期間結束後。", "https://abc.xyz/investor/news/earnings/2026/q1-earnings-call-date/", "https://marketbeat.com/stocks/NASDAQ/GOOG/earnings/"
-"公司行動", "財報發布", "亞馬遜 (Amazon) 2026年第一季財報發布", "2026-04-29", "2026-04-29", "此事件發生於指定期間結束後。", "https://gotrade.com/blog/us-stocks-to-watch-this-earnings-season-april-2026", ""
-"公司行動", "財報發布", "Meta Platforms 2026年第一季財報發布", "2026-04-29", "2026-04-29", "此事件發生於指定期間結束後。", "https://gotrade.com/blog/us-stocks-to-watch-this-earnings-season-april-2026", ""
-"公司行動", "財報發布", "蘋果 (Apple) 2026財年第二季財報發布與電話會議", "2026-04-30", "2026-04-30", "美東時間下午5點舉行。此事件發生於指定期間結束後。", "https://9to5mac.com/2026/04/02/apple-q2-2026-earnings-release-for-april-30/", "https://www.apple.com/investor/earnings-calendar/"
+類別,子類別,事件名稱,開始日期,結束日期,備註,Link1,Link2
+市場機制,台灣股市休市,勞動節,2026-05-01,2026-05-01,台灣證券交易所與櫃買中心休市日,,
+經濟數據,利率決策,美國聯邦公開市場委員會 (FOMC) 會議,2026-04-28,2026-04-29,聯準會利率決策會議,,
+經濟數據,通膨數據,美國生產者物價指數 (PPI) 發布,2026-04-29,2026-04-29,美國東部時間上午 8:30 發布,,
+公司行動,財報發布,蘋果 (AAPL) 2026 會計年度第二季財報電話會議,2026-04-30,2026-04-30,美國東部時間下午 5:00 舉行電話會議,,
+公司行動,財報發布,微軟 (MSFT) 2026 會計年度第三季財報發布,2026-04-29,2026-04-29,預計發布,,
+公司行動,除息,富邦臺灣科技ETF (0052) 除息,2026-04-20,2026-04-20,臺灣證券交易所上市ETF,,
+公司行動,除息,元大臺灣高股息ETF (0056) 除息,2026-04-23,2026-04-23,臺灣證券交易所上市ETF,,
+公司行動,除息,泉碩 (4575) 除息,2026-04-23,2026-04-23,櫃買中心興櫃股票,,
+公司行動,除權,元勝國際 (6704) 除權,2026-04-23,2026-04-23,櫃買中心興櫃股票,,
+公司行動,除息,星通資訊 (7815) 除息,2026-04-23,2026-04-23,櫃買中心興櫃股票,,
+公司行動,除息,學悅科技 (6780) 除息,2026-04-24,2026-04-24,櫃買中心興櫃股票,,
+公司行動,除息,群策 (6898) 除息,2026-04-24,2026-04-24,櫃買中心興櫃股票,,
+公司行動,除息,義明 (7858) 除息,2026-04-24,2026-04-24,櫃買中心興櫃股票,,
+公司行動,除息,味榮 (1260) 除息,2026-04-29,2026-04-29,櫃買中心興櫃股票,,
+公司行動,除息,慕求生技 (4589) 除息,2026-04-29,2026-04-29,櫃買中心興櫃股票,,
+公司行動,除權,上博科技 (7729) 除權,2026-04-29,2026-04-29,櫃買中心興櫃股票,,
 ```
 <!-- END_EVENTS_OUTPUT -->
 
