@@ -32,7 +32,7 @@ jobs:
         run: python stock_events_poc.py --update-readme
 
       - name: Upload CSV Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: market-events-csv
           path: market_events.csv
