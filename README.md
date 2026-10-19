@@ -282,7 +282,7 @@ Queries the Google Cloud Service Usage API to report current "Requests Per Minut
 *   **Requires:** `gcloud` authentication and `GCP_PROJECT_ID`.
 
 <!-- START_QUOTA_OUTPUT -->
-產生時間: 2026-10-12 02:47:57 CST
+產生時間: 2026-10-19 01:58:24 CST
 
 ```text
 -------------------------------------------------------------------------------------
